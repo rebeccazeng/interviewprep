@@ -20,15 +20,21 @@ Explanation: Smallest subarrays with a sum greater than or equal to '8' are [3, 
 
 # my code
 def smallest_subarray_with_given_sum(s, arr):
+	# initiate the values for sum to keep track, min length to return, and where the array starts
+	# the reason why we don't need where the subarray ends is because we'll be looping through
+	# so technically it would be an extra variable
+
 	window_sum = 0
 	min_length = math.inf 
 	window_start = 0
 
+	# going through this for loop will help us find the end of the subarray
 	for window_end in range(0, len(arr)):
 		window_sum += arr[window_end] #add the next element to start counting the sum within the subarray
 		# now we're going to shrink the window as small as possible until the window_sum is smaller than s
+		# note: this would only happen once we reach = s or > s. so don't shrink the subarray until it's actually valid
 		while window_sum >= s:
-			min_length = min(min_length, window_end - window_start + 1) # ? possible minimum brackets
+			min_length = min(min_length, window_end - window_start + 1)
 			window_sum -= arr[window_start] # erase the one from the back
 			window_start += 1 # move the brackets forward
 	if min_length == math.inf:
