@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<style>
+    /*	Flexbox wrapper */
+	div.flex-grid {
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: center;
+		width: 100%;
+	}
+	/* Content */
+	div.num {
+		display: flex;
+		border: 1px solid black;
+		flex-direction: column;
+		flex-basis: 100%;
+		justify-content: center;
+		align-items: center;
+		flex: 1;
+	}
+	</style>
+
+	<script>
+		function updateBox1() {
+			var timesClicked = document.getElementById("box1").innerHTML;
+			  timesClicked ++;
+			  console.log("he")
+
+			document.getElementById("box1").innerHTML = timesClicked;
+			return true 
+		}
+		function updateBox2() {
+			var timesClicked = document.getElementById("box2").innerHTML;
+			  timesClicked ++;
+
+			document.getElementById("box2").innerHTML = timesClicked;
+			return true 
+		}
+		function updateBox3() {
+			var timesClicked = document.getElementById("box3").innerHTML;
+			  timesClicked ++;
+
+			document.getElementById("box3").innerHTML = timesClicked;
+			return true 
+		}
+		function updateBox4() {
+			var timesClicked = document.getElementById("box4").innerHTML;
+			  timesClicked ++;
+
+			document.getElementById("box4").innerHTML = timesClicked;
+			return true 
+		}
+		function updateBox5() {
+			var timesClicked = document.getElementById("box5").innerHTML;
+			  timesClicked ++;
+
+			document.getElementById("box5").innerHTML = timesClicked;
+			return true 
+		}
+		function updateBox6() {
+			var timesClicked = document.getElementById("box6").innerHTML;
+			  timesClicked ++;
+
+			document.getElementById("box6").innerHTML = timesClicked;
+			return true 
+		}
+		function updateBox7() {
+			var timesClicked = document.getElementById("box7").innerHTML;
+			  timesClicked ++;
+
+			document.getElementById("box7").innerHTML = timesClicked;
+			return true 
+		}
+		function updateBox8() {
+			var timesClicked = document.getElementById("box8").innerHTML;
+			  timesClicked ++;
+
+			document.getElementById("box8").innerHTML = timesClicked;
+			return true 
+		}
+		function updateBox9() {
+			var timesClicked = document.getElementById("box9").innerHTML;
+			  timesClicked ++;
+
+			document.getElementById("box9").innerHTML = timesClicked;
+			return true 
+		}
+		function updateAll() {
+			setTimeout(() => {updateBox1();}, 1000);
+			setTimeout(() => {updateBox2();}, 2000);
+			setTimeout(() => {updateBox3();}, 3000);
+			setTimeout(() => {updateBox4();}, 4000);
+			setTimeout(() => {updateBox5();}, 5000);
+			setTimeout(() => {updateBox6();}, 6000);
+			setTimeout(() => {updateBox7();}, 7000);
+			setTimeout(() => {updateBox8();}, 8000);
+			setTimeout(() => {updateBox9();}, 9000);
+		}
+	</script>
+</head>
+<body>
+	<div class="flex-grid">
+		<div class="num" id="box1" onclick="updateBox1()">0</div>
+		<div class="num" id="box2" onclick="updateBox2()">0</div>
+		<div class="num" id="box3" onclick="updateBox3()">0</div>
+	</div>
+	<div class="flex-grid">
+		<div class="num" id="box4" onclick="updateBox4()">0</div>
+		<div class="num" id="box5" onclick="updateBox5()">0</div>
+		<div class="num" id="box6" onclick="updateBox6()">0</div>
+	</div>		
+	
+	<div class="flex-grid">
+		<div class="num" id="box7" onclick="updateBox7()">0</div>
+		<div class="num" id="box8" onclick="updateBox8()">0</div>
+		<div class="num" id="box9" onclick="updateBox9()">0</div>
+	</div>
+
+	<button onclick="updateAll()">click here</button>
+
+</body>
+</html>
