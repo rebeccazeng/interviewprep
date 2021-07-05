@@ -39,3 +39,9 @@ def search_pair(arr, target_sum, left, triplets):
       left += 1  # we need a pair with a bigger sum
     else:
       right -= 1  # we need a pair with a smaller sum
+
+def main():
+  print(search_triplets([-3, 0, 1, 2, -1, 1, -2]))
+  print(search_triplets([-5, 2, -1, -2, 3]))
+
+main()
